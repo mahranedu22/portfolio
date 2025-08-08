@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ahmed Mahran — Portfolio</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#222; background:#fafafa; }
+  .container{ max-width:980px; margin:28px auto; padding:18px; }
+  header{ display:flex; align-items:center; gap:18px; }
+  .avatar{ width:84px; height:84px; border-radius:12px; background:#ddd; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:28px; color:#555; }
+  h1{ margin:0; color:#1177dd; }
+  p.lead{ margin:8px 0 18px; color:#333; }
+  .badges{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+  .badge{ background:#eef6ff; padding:6px 10px; border-radius:6px; color:#0a58ca; font-weight:600; font-size:13px; }
+  .projects{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin-top:12px; }
+  .card{ background:#fff; border-radius:8px; box-shadow:0 6px 18px rgba(20,20,40,0.06); overflow:hidden; display:flex; flex-direction:column; }
+  .card img{ width:100%; height:190px; object-fit:cover; display:block; }
+  .card .body{ padding:14px; flex:1; display:flex; flex-direction:column; }
+  .card h3{ margin:0 0 8px; font-size:18px; color:#0b4a8b; }
+  .card p{ margin:0 0 12px; color:#444; flex:1; }
+  .links{ display:flex; gap:8px; }
+  .btn{ text-decoration:none; background:#1177dd; color:#fff; padding:8px 10px; border-radius:6px; font-weight:600; font-size:14px; }
+  .btn.secondary{ background:#6c757d; }
+  footer{ margin-top:28px; padding-top:12px; border-top:1px solid #eee; color:#555; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  .contact{ display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
+  .small{ font-size:13px; color:#666; }
+  @media (max-width:560px){ .avatar{ width:64px;height:64px;font-size:22px } }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">AM</div>
+      <div>
+        <h1>Ahmed Mahran</h1>
+        <p class="lead">Skilled Backend Developer focused on Django &amp; DRF. Passionate about building scalable secure backend systems, realtime features with WebSockets, Docker, Redis &amp; Celery. Quantum computing researcher — Qiskit.</p>
+        <div class="badges">
+          <span class="badge">Django</span>
+          <span class="badge">DRF</span>
+          <span class="badge">Docker</span>
+          <span class="badge">Redis</span>
+          <span class="badge">Celery</span>
+          <span class="badge">Qiskit</span>
+          <span class="badge">Flutter</span>
+        </div>
+        <div class="small">Resume: <a href="https://drive.google.com/file/d/1Ysm7N-I8SdQ0pLIS92hwfi_QNW3iuVGC/view" target="_blank">Open CV</a></div>
+      </div>
+    </header>
+
+    <section style="margin-top:22px;">
+      <h2 style="color:#1177dd;margin:0 0 10px">Projects</h2>
+      <div class="projects">
+
+        <!-- Online Quiz Game -->
+        <article class="card">
+          <img src="https://drive.google.com/uc?export=view&id=1G3elyYqKdbaErrPufnW1Nq0s7i5unM6t" alt="Online Quiz">
+          <div class="body">
+            <h3>Online Quiz Game</h3>
+            <p>Real-time quiz with cookie-based auth, WebSockets (Django Channels/Daphne), Redis caching and DRF backend for APIs.</p>
+            <div class="links">
+              <a class="btn" href="https://github.com/mahran80/online-quiz-game" target="_blank">GitHub</a>
+              <a class="btn secondary" href="https://drive.google.com/file/d/1qVBUrSGBTabxO1XVch2BMwoamEPdAS_Z/preview" target="_blank">Demo (video)</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Aya Food -->
+        <article class="card">
+          <img src="https://drive.google.com/uc?export=view&id=1FIIVz3Hh3UY0S6HQp0OB2Wai3LNq5LiM" alt="Aya Food">
+          <div class="body">
+            <h3>Aya Food (E-commerce)</h3>
+            <p>Food delivery marketplace with Django, PostgreSQL, Celery, Redis &amp; RabbitMQ. Orders, invoices (PDF), image upload, email confirmations.</p>
+            <div class="links">
+              <a class="btn" href="https://github.com/mahran80/Ecommrece" target="_blank">GitHub</a>
+              <a class="btn secondary" href="https://drive.google.com/file/d/1JBzJLs0uqZZXua-GQ71XKhZszqONzeXa/preview" target="_blank">Demo (video)</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Hotel Booking -->
+        <article class="card">
+          <img src="https://drive.google.com/uc?export=view&id=10jcRtus0Oa-7Pb8PV_FbznsvQ_rWUTXW" alt="Hotel Booking">
+          <div class="body">
+            <h3>Hotel Booking System</h3>
+            <p>Booking platform with JWT auth, real-time room availability, advanced filtering and booking validation (Django REST Framework).</p>
+            <div class="links">
+              <a class="btn" href="https://github.com/mahran80/hotelBooking" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Quantum Random Password Generator -->
+        <article class="card">
+          <img src="https://via.placeholder.com/900x600.png?text=Quantum+Random+Password+Generator" alt="Quantum">
+          <div class="body">
+            <h3>Quantum Random Password Generator</h3>
+            <p>QRNG-based password generator using Qiskit and Tkinter GUI. Strong authentication leveraging quantum randomness.</p>
+            <div class="links">
+              <a class="btn" href="https://github.com/mahran80/Quantum_Encrypted_Passswords" target="_blank">GitHub</a>
+              <a class="btn secondary" href="https://drive.google.com/file/d/1gk2m8ziNtoDsqWbxgeZTmv2s2C7FyySI/preview" target="_blank">Demo (video)</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="contact">
+        <div><strong>Contact:</strong></div>
+        <div class="small">Ahmed.mahran824@gmail.com</div>
+        <div class="small">01141125185</div>
+        <div class="small"><a href="https://www.linkedin.com/in/ahmed-mahran-528187264" target="_blank">LinkedIn</a></div>
+        <div class="small"><a href="https://github.com/mahran80" target="_blank">GitHub</a></div>
+      </div>
+      <div class="small">© Ahmed Mahran</div>
+    </footer>
+  </div>
+</body>
+</html>
