@@ -8,7 +8,8 @@
   body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#222; background:#fafafa; }
   .container{ max-width:980px; margin:28px auto; padding:18px; }
   header{ display:flex; align-items:center; gap:18px; }
-  .avatar{ width:84px; height:84px; border-radius:12px; background:#ddd; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:28px; color:#555; }
+  .avatar{ width:84px; height:84px; border-radius:12px; background:#ddd; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:28px; color:#555; overflow:hidden; }
+  .avatar-img { width:84px; height:84px; object-fit:cover; display:block; border-radius:12px; }
   h1{ margin:0; color:#1177dd; }
   p.lead{ margin:8px 0 18px; color:#333; }
   .badges{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
@@ -25,13 +26,16 @@
   footer{ margin-top:28px; padding-top:12px; border-top:1px solid #eee; color:#555; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
   .contact{ display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
   .small{ font-size:13px; color:#666; }
-  @media (max-width:560px){ .avatar{ width:64px;height:64px;font-size:22px } }
+  @media (max-width:560px){ .avatar{ width:64px;height:64px;font-size:22px } .avatar-img{ width:64px;height:64px } }
 </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="avatar">AM</div>
+      <!-- Avatar image: replaced text avatar with your Google Drive photo -->
+      <div class="avatar">
+        <img class="avatar-img" src="https://drive.google.com/uc?export=view&id=1k7nlotRPi7o1LV2Bkf9b65dT2x7hsAcv" alt="Ahmed Mahran">
+      </div>
       <div>
         <h1>Ahmed Mahran</h1>
         <p class="lead">Skilled Backend Developer focused on Django &amp; DRF. Passionate about building scalable secure backend systems, realtime features with WebSockets, Docker, Redis &amp; Celery. Quantum computing researcher — Qiskit.</p>
@@ -94,9 +98,9 @@
           </div>
         </article>
 
-        <!-- Quantum Random Password Generator -->
+        <!-- Quantum Random Password Generator (using the new photo) -->
         <article class="card">
-          <img src="https://via.placeholder.com/900x600.png?text=Quantum+Random+Password+Generator" alt="Quantum">
+          <img src="https://drive.google.com/uc?export=view&id=1k7nlotRPi7o1LV2Bkf9b65dT2x7hsAcv" alt="Quantum Random Password Generator">
           <div class="body">
             <h3>Quantum Random Password Generator</h3>
             <p>QRNG-based password generator using Qiskit and Tkinter GUI. Strong authentication leveraging quantum randomness.</p>
